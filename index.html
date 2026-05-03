@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Между строк</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,600;1,400&family=Raleway:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+
+  <div class="bg-layer-1"></div>
+  <div class="bg-layer-2"></div>
+  <div class="noise-texture"></div>
+
+
+  <nav class="main-nav" id="mainNav">
+    <div class="nav-content">
+      <div class="nav-logo serif">Между строк</div>
+      <div class="nav-links">
+        <a href="#poems" class="nav-link active" data-page="poems">Стихи</a>
+        <a href="#about" class="nav-link" data-page="about">Обо мне</a>
+        <button class="random-btn" id="randomBtn" aria-label="Random poem">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 3 21 3 21 8"></polyline>
+            <line x1="4" y1="20" x2="21" y2="3"></line>
+            <polyline points="21 16 21 21 16 21"></polyline>
+            <line x1="15" y1="15" x2="21" y2="21"></line>
+            <line x1="4" y1="4" x2="9" y2="9"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="content-wrapper">
+
+    <div class="page-container" id="poemsPage">
+
+      <header class="hero" id="hero">
+        <div class="hero-content">
+          <h1 class="serif hero-title">
+            О том, что не получается сказать
+            <span class="title-glow"></span>
+          </h1>
+          <p class="hero-subtitle">Если что-то откликнется — значит, мы в какой-то точке думаем одинаково.</p>
+        </div>
+      </header>
+
+
+      <div class="poetry-grid-wrapper">
+        <div class="poetry-grid" id="poetryGrid">
+        </div>
+
+        <div class="load-more-wrapper" id="loadMoreWrapper">
+          <button class="load-more-btn" id="loadMoreBtn">
+            Ещё
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-container hidden" id="aboutPage">
+      <div class="about-content">
+        <h1 class="serif about-title">Обо мне</h1>
+
+        <div class="about-layout">
+          <div class="about-photo-wrapper">
+            <div class="about-photo">
+              <img src="images/yaaa.jpg" alt="user-photo">
+            </div>
+            <p class="photo-caption serif">Developer & Poet</p>
+          </div>
+
+          <!-- Text section -->
+          <div class="about-text">
+            <p class="serif about-intro">Делаю простые и аккуратные сайты под тексты и личные проекты.</p>
+            <p>Мне нравится, когда сайт не перегружен и не отвлекает от самого главного — содержания.</p>
+            <p>Этот проект — пример того, как может выглядеть страница с поэзией или любым другим авторским материалом.</p>
+            <p>Могу сделать что-то подобное под тебя: с твоими текстами, стилем и настроением.</p>
+            <p>Если откликнулось — напиши, обсудим.</p>
+
+          </div>
+        </div>
+
+        <footer class="site-footer">
+          <div class="footer-bg"></div>
+          <div class="footer-content">
+            <div class="footer-links">
+              <a href="https://m.vk.com/a1gaa" target="_blank">VK</a>
+              <span>·</span>
+              <a href="#" target="_blank">Twitter</a>
+              <span>·</span>
+              <a href="mailto:gavrilov.231205@gmail.com">Email</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="poem-modal" id="poemModal">
+    <div class="poem-overlay"></div>
+    <div class="poem-overlay-vignette"></div>
+    <button class="poem-close" id="poemClose" aria-label="Close">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+    <div class="poem-content">
+      <h1 class="serif poem-title" id="poemTitle"></h1>
+      <div class="poem-stanzas" id="poemStanzas"></div>
+    </div>
+    <div class="poem-noise"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
